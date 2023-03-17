@@ -1,4 +1,4 @@
-import { getToys, setToy } from "./database.js"
+import { getToys, setToy } from "./dataAccess.js"
 const toys = getToys()
 
 document.addEventListener(

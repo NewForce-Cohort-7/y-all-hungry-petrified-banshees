@@ -47,7 +47,7 @@ export const yallHungry= () => {
         </article>
         <article class="customOrders">
             <h2>Your Order</h2>
-            ${Orders()}
+            // ${Orders()}
         </article>
     `
 }
