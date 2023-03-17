@@ -90,7 +90,7 @@ const database = {
     timestamp: 1543215616151}
     ],
     orderBuilder:[{
-
+    }]}
 export const getLocations = () => {
     return database.getLocations.map(f => ({...f}))
 }
