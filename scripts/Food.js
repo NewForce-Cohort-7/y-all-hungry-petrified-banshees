@@ -12,7 +12,7 @@ document.addEventListener(
 )
 
 export const Foods = () => {
-    return `<h2>Food Choices</h2>
+    return `
         <select id="foods">
             <option value="0">Select a food choice</option>
             ${

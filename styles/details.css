@@ -1,0 +1,31 @@
+/* You need to create the rest of styles for the layout shown */
+#col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.choices{
+    display: inline;
+    flex-direction: column;
+}
+
+.options {
+    flex-basis: 27%;
+    margin: 1.25rem 5rem;
+    border: 1px dashed dodgerblue;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
+    background-color: beige;
+}
+
+.orders {
+    border: 1px dashed dodgerblue;
+    background-color: aliceblue;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: large;
+    max-width: 95%;
+    word-spacing: 2px;
+}
