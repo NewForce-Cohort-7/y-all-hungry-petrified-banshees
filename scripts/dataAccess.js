@@ -28,6 +28,11 @@ export const getdessertInventory = () => {
 export const gethappyToysInventory = () => {
     return database.happyToysInventory.map(toyItems => ({...toyItems}))
 }
+
+export const getOrderBuilder = () => {
+    return database.orderBuilder
+}
+
 //Create set functions
 export const setLocation = (id) => {
     database.orderBuilder.locationId = id
