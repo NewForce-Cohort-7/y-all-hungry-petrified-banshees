@@ -1,7 +1,7 @@
 import {setDessert, getDesserts } from "./dataAccess.js";
 
 
-desserts = getDesserts()
+const desserts = getDesserts()
 
 //will need a addevent listeners
 document.addEventListener(
@@ -16,6 +16,7 @@ document.addEventListener(
 //build html that will be exported to the module responsible for our html
 
 export const Desserts = () => {
+    
     let html = '<select id="desserts">'
     html += '<option value="0"> Select a dessert choice</option>'
 
