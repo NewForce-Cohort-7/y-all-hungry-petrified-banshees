@@ -13,7 +13,7 @@ document.addEventListener(
 )
 
 export const Locations = () => {
-    let html = "<h2>Choose a location to pick up your order</h2>"
+    let html;
 
     html += '<select id ="location">'
     html += `<option value="0">Select a location</option>`
