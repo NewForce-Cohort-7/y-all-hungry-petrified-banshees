@@ -1,4 +1,4 @@
-import { happyToy } from "./toys.js"
+import { Toys } from "./toys.js"
 import {Desserts} from "./dessert.js"
 import { addCustomOrder } from "./dataChange.js"
 import { Drinks } from "./Drinks.js"
@@ -39,7 +39,7 @@ export const yallHungry= () => {
             </section>
             <section class="choices__happyToys options">
                 <h2>Happy Toys!!!!</h2>
-                ${happyToy()}
+                ${Toys()}
             </section>
         </article>
         <article>
@@ -47,7 +47,7 @@ export const yallHungry= () => {
         </article>
         <article class="customOrders">
             <h2>Your Order</h2>
-            // ${Orders()}
+            
         </article>
     `
 }
