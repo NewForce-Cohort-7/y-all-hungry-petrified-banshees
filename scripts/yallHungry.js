@@ -2,8 +2,8 @@ import { happyToy } from "./toys.js"
 import {Desserts} from "./dessert.js"
 import { addCustomOrder } from "./dataChange.js"
 import { Drinks } from "./Drinks.js"
-import { Locations } from "./Locations.js"
-import { Foods } from "./Food.js"
+import {Locations} from "./Locations.js"
+import {Foods} from "./Food.js"
 
 document.addEventListener(
     "click",
@@ -35,6 +35,7 @@ export const yallHungry= () => {
             <section class="choices__desserts options">
                 <h2>Desserts</h2>
                 ${Desserts()}
+            </section>
             </section>
             <section class="choices__happyToys options">
                 <h2>Happy Toys!!!!</h2>
