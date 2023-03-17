@@ -8,8 +8,6 @@ document.addEventListener(
     "change",
     (changeEvent) => {
         if (changeEvent.target.id === "dessert") {
-            const chosenOption = changeEvent.target.value
-            
             setDessert(parseInt(changeEvent.target.value))  
         }
     }
