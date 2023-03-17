@@ -14,9 +14,7 @@ document.addEventListener(
 )
 // .MAP METHOD
 export const Drinks = () => {
-    let html;
-
-    html += '<select id="drink">'
+    let html= '<select id="drink">'
     html += '<option value="0">Select a drink</option>'
 
     const arrayOfOptions = drinks.map( (drink) => {
