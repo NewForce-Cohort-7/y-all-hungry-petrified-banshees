@@ -13,9 +13,9 @@ document.addEventListener(
 )
 
 export const Locations = () => {
-    let html;
+    
 
-    html += '<select id ="location">'
+    let html = '<select id ="location">'
     html += `<option value="0">Select a location</option>`
 
     for (const location of locations) {
