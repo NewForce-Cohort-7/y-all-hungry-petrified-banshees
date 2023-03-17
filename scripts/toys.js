@@ -4,7 +4,7 @@ const toys = getToys()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "toy") {
+        if (event.target.id === "toy") {
             setToy(parseInt(event.target.value))
         }
     }
@@ -15,7 +15,7 @@ export const happyToy = () => {
 
     // Use .map() for converting objects to <li> elements
     const listItems = toys.map(toy => {
-        return `<select id="resource">
+        return `<select id="toy">
         <option value="0">Happy Toys...</option>
         <option value="1">Slinky</option>
         <option value="2">Tamagotchi</option>
