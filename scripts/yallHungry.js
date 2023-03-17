@@ -1,6 +1,7 @@
 import { happyToy } from "./toys.js"
 import {} from "./ .js"
 import { addCustomOrder } from "./dataChange.js"
+import { Drinks } from "./Drinks.js"
 document.addEventListener(
     "click",
     (event) => { 
@@ -19,9 +20,9 @@ export const yallHungry= () => {
                 <h2></h2>
                 ${()}
             </section>
-            <section class="choices__ options">
-                <h2></h2>
-                ${()}
+            <section class="choices__drinks options">
+                <h2>Drinks</h2>
+                ${Drinks()}
             </section>
             <section class="choices__ options">
                 <h2></h2>
