@@ -1,7 +1,6 @@
 import { getLocations, setLocation, getOrderBuilder } from "./dataAccess.js"
 
 const locations = getLocations()
-const currentOrder = getOrderBuilder()
 
 document.addEventListener(
     "change",
