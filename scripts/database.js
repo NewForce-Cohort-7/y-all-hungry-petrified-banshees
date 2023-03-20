@@ -75,10 +75,10 @@ const database = {
     {id: 4, locationId: 4, dessertId: 4, quantity: 20}
     ],
     happyToysInventory:[
-    {id: 1, locationId: 1, toysId: 1, quantity: 3},
-    {id: 2, locationId: 2, toysId: 2, quantity: 5},
-    {id: 3, locationId: 3,toysId: 3,quantity: 8},
-    {id:4 , locationId: 4,toysId: 4, quantity: 12}
+    {id: 1, locationId: 1, toyId: 1, quantity: 3},
+    {id: 2, locationId: 2, toyId: 2, quantity: 5},
+    {id: 3, locationId: 3, toyId: 3,quantity: 8},
+    {id:4 , locationId: 4, toyId: 4, quantity: 12}
     ],
     customOrders: [{
     id: 1,
@@ -89,7 +89,7 @@ const database = {
     locationId: 1,
     timestamp: 1543215616151}
     ],
-    orderBuilder:[{
-    }]}
+    orderBuilder:{}
+}
 
 export {database}

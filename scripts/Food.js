@@ -1,6 +1,7 @@
 import { getFoods, setFood, getOrderBuilder } from "./dataAccess.js";
 
 const foods = getFoods()
+const currentOrder = getOrderBuilder()
 
 document.addEventListener(
     "change",
@@ -13,13 +14,17 @@ document.addEventListener(
 
 export const Foods = () => {
     return `
-        <select id="foods">
-            <option value="0">Select a food choice</option>
+        <select id="food">
+            <option value="0">Select a food choice
             ${
                 
                 foods.map(
                     (food) => {
-                        return `<option value="${food.id}">${food.name}</option>`
+                        if(currentOrder.foodId === food.id){
+                            return `<option value="${food.id}" selected>${food.name}</option>`
+                        }else{
+                            return `<option value="${food.id}">${food.name}</option>`
+                        }
                     }
                 ).join("")
             }
