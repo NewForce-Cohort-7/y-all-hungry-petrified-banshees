@@ -17,7 +17,8 @@ document.addEventListener(
 //build html that will be exported to the module responsible for our html
 
 export const Desserts = () => {
-    
+    const currentOrder = getOrderBuilder()
+
     let html = '<select id="dessert">'
     html += '<option value="0"> Select a dessert choice'
 
