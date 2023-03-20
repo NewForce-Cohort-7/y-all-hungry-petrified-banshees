@@ -3,19 +3,20 @@ const drinks = getDrinks()
 
 document.addEventListener(
     "change",
-    (changeEvent) => {
-        if (changeEvent.target.id === "drink") {
-            // const chosenOption = changeEvent.target.value
+    (event) => {
+        if (event.target.id === "drinks") {
+            // const chosenOption = event.target.value
             // console.log(chosenOption)  // "1" or "2"
 
-            setDrink(parseInt(changeEvent.target.value))
+            setDrink(parseInt(event.target.value))
         }
     }
 )
 // .MAP METHOD
 export const Drinks = () => {
-    let html= '<select id="drink">'
-    html += '<option value="0">Select a drink</option>'
+    
+    let html = '<select id="drink">'
+    html += '<option value="0"> Select a drink</option>'
 
     const arrayOfOptions = drinks.map( (drink) => {
             return `<option value="${drink.id}">${drink.name}</option>`
