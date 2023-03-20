@@ -1,6 +1,6 @@
 import { getDrinks, setDrink, getOrderBuilder } from "./dataAccess.js"
 const drinks = getDrinks()
-const currentOrder = getOrderBuilder()
+
 
 document.addEventListener(
     "change",
@@ -20,7 +20,8 @@ export const Drinks = () => {
     html += '<option value="0"> Select a drink'
 
     const arrayOfOptions = drinks.map( (drink) => {
-            
+        const currentOrder = getOrderBuilder()
+        
         if(currentOrder.drinkId === drink.id){
             return `<option name="drink" value="${drink.id}" selected>${drink.name}`
         }else{
