@@ -1,6 +1,7 @@
 import { getLocations, setLocation, getOrderBuilder } from "./dataAccess.js"
 
 const locations = getLocations()
+const currentOrder = getOrderBuilder()
 
 document.addEventListener(
     "change",
@@ -13,13 +14,22 @@ document.addEventListener(
 )
 
 export const Locations = () => {
+    const currentOrder = getOrderBuilder()
+
+    let html = '<select id="location">'
+    html += currentOrder.locationId ? `<option value="0">Select a location`: `<option value="0" selected>Select a location`
+        // if(currentOrder.locationId){
+        //     html +=`<option value="0">Select a location` 
+        // }else {
+        //     html += `<option value="0" selected>Select a location`
+        // }
     
-
-    let html = '<select id ="locations">'
-    html += `<option value="0">Select a location</option>`
-
     for (const location of locations) {
-        html += `<option value="${location.id}">${location.name}`
+        if(currentOrder.locationId === location.id){
+            html += `<option name="location" value="${location.id}" selected>${location.name}`
+        }else{
+            html += `<option name="location" value="${location.id}">${location.name}`
+        }
     }
     html += "</select>"
     return html

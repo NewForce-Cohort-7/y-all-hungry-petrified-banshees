@@ -10,8 +10,13 @@ document.addEventListener(
     "click",
     (event) => { 
         const itemClicked = event.target
-        if (itemClicked.id === "orderButton") {
+        if (itemClicked.id.startsWith("orderButton")) {
             addCustomOrder()
+            // document.getElementById("location")[0].setAttribute('selected','selected');
+            // document.getElementById("drink")[0].setAttribute('selected','selected');
+            // document.getElementById("food")[0].setAttribute('selected','selected');
+            // document.getElementById("dessert")[0].setAttribute('selected','selected');
+            // document.getElementById("toy")[0].setAttribute('selected','selected');
         }
     }
 )

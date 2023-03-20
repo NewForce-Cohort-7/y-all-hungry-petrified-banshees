@@ -1,7 +1,8 @@
-import {setDessert, getDesserts } from "./dataAccess.js";
+import {setDessert, getDesserts, getOrderBuilder } from "./dataAccess.js";
 
 
 const desserts = getDesserts()
+const currentOrder = getOrderBuilder()
 
 //will need a addevent listeners
 document.addEventListener(
@@ -17,11 +18,15 @@ document.addEventListener(
 
 export const Desserts = () => {
     
-    let html = '<select id="desserts">'
-    html += '<option value="0"> Select a dessert choice</option>'
+    let html = '<select id="dessert">'
+    html += '<option value="0"> Select a dessert choice'
 
     const arrayOfOptions = desserts.map( (dessert) => {
-            return `<option value="${dessert.id}">${dessert.name}</option>`
+        if(currentOrder.dessertId === dessert.id){
+            return `<option name="drink" value="${dessert.id}" selected>${dessert.name}`
+        }else{
+            return `<option name="drink" value="${dessert.id}">${dessert.name}`
+        }   
         }
     )
 
