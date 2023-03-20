@@ -1,6 +1,5 @@
 import { getToys, setToy, getOrderBuilder } from "./dataAccess.js"
 const toys = getToys()
-const currentOrder = getOrderBuilder()
 
 document.addEventListener(
     "change",
@@ -9,9 +8,10 @@ document.addEventListener(
             setToy(parseInt(event.target.value))
         }
     }
-)
-
-export const Toys = () => {
+    )
+    
+    export const Toys = () => {
+    const currentOrder = getOrderBuilder()
     return `
         <select id="toy">
             <option value="0">Select a toy
