@@ -19,11 +19,11 @@ export const yallHungry= () => {
     return  `
         <h1>Yall Hungry?</h1>
         <article class="choices">
-            <section class="choices__ options">
+            <section class="choices__ locations options">
                 <h2>Locations</h2>
                 ${Locations()}
             </section>
-            <section class="choices__ options">
+            <section class="choices__ foods options">
                 <h2>Foods</h2>
                 ${Foods()}
             </section>
