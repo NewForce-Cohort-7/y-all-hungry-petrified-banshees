@@ -12,7 +12,7 @@ document.addEventListener(
 
 export const Toys = () => {
     return `
-        <select id="toys">
+        <select id="toy">
             <option value="0">Select a toy</option>
             ${
                 
