@@ -4,6 +4,7 @@ import { addCustomOrder } from "./dataChange.js"
 import { Drinks } from "./Drinks.js"
 import {Locations} from "./Locations.js"
 import {Foods} from "./Food.js"
+import { Orders } from "./orders.js"
 
 document.addEventListener(
     "click",
@@ -46,7 +47,7 @@ export const yallHungry= () => {
         </article>
         <article class="customOrders">
             <h2>Your Order</h2>
-            
+            ${Orders()}
         </article>
     `
 }

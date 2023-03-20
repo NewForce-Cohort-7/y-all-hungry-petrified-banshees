@@ -33,6 +33,11 @@ export const getOrderBuilder = () => {
     return database.orderBuilder
 }
 
+export const getOrders = () => {
+    return database.customOrders.map(orders => ({...orders}))
+}
+
+
 //Create set functions
 export const setLocation = (id) => {
     database.orderBuilder.locationId = id
