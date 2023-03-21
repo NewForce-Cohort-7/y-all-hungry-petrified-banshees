@@ -1,11 +1,13 @@
-import { getOrders, getFoods, getDrinks, getToys, getDesserts } from "./dataAccess.js"
+import { getOrders, getFoods, getLocations, getDrinks, getToys, getDesserts, getOrderBuilder } from "./dataAccess.js"
 
 
 const drinks = getDrinks()
 const foods = getFoods()
 const toys = getToys()
 const desserts = getDesserts()
+const locations = getLocations()
 const order = getOrders()
+const currentOrder = getOrderBuilder()
 
 
 
@@ -39,13 +41,17 @@ const costString = totalCost.toLocaleString("en-US", {
     style: "currency",
     currency: "USD"
 })
-
-
+let locationMatch;
+for (const location of locations) {
+    if(location.id === order.locationId){
+        locationMatch = location.name
+    }
+}
 
 
 return `<li>
  Order #${order.id} Cost: ${costString} 
- Order #${order.id} was placed on ${order.timestamp}
+ Order #${order.id} was placed on ${order.timestamp} @ our ${locationMatch} location
      </li>`
  }
 export const Orders = () => {
