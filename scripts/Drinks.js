@@ -19,7 +19,7 @@ export const Drinks = () => {
     const currentOrder = getOrderBuilder()
 
     return `
-        <select id="">
+        <select id="singleDrink">
             <option value="0">Select a drink
             ${
                 

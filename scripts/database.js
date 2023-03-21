@@ -57,7 +57,7 @@ const database = {
     { id: 5, name: "Big Ugly Creek WV"}
     ],
     foodInventory: [ 
-    {id:1, locationId: 1, foodId:2, quantity: 7}, 
+    {id:1, locationId: 1, foodId:2, quantity: 7},
     {id: 2, locationId: 2, foodId: 4, quantity: 6},
     {id: 3, locationId: 3, foodId: 1, quantity: 8},
     {id: 4, locationId: 4, foodId: 3, quantity: 9} 

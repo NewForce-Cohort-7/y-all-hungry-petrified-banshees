@@ -48,13 +48,13 @@ export const setFood = (id) => {
 }
 export const setDrink = (id) => {
     database.orderBuilder.drinkId = id
-   
+
 }
 export const setDessert = (id) => {
     database.orderBuilder.dessertId = id
-    
+
 }
 export const setToy = (id) => {
     database.orderBuilder.toyId = id
-    
+
 }
