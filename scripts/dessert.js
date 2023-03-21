@@ -1,8 +1,12 @@
-import {setDessert, getDesserts, getOrderBuilder } from "./dataAccess.js";
+import {setDessert, getDesserts, getOrderBuilder, getdessertInventory, getLocations } from "./dataAccess.js";
 
 
 const desserts = getDesserts()
 const currentOrder = getOrderBuilder()
+
+const dessertsInventory = getdessertInventory ()
+
+const locations = getLocations ()
 
 //will need a addevent listeners
 document.addEventListener(
@@ -34,4 +38,18 @@ export const Desserts = () => {
     html += arrayOfOptions.join("")
     html += "</select>"
     return html
+}
+
+//Function to find dessert inventory based off location
+
+export const filterDessertInventoryByLocation = (desserts,singleDessertTypeInventory)=>{
+    let dessertType= []
+    for(const dessert of desserts){
+        if (dessert.id === singleDessertTypeInventory.dessertId){
+            dessertType.push(dessert)
+           
+        }
+    }
+    return dessertType
+    
 }

@@ -57,28 +57,48 @@ const database = {
     { id: 5, name: "Big Ugly Creek WV"}
     ],
     foodInventory: [ 
-    {id:1, locationId: 1, foodId:2, quantity: 7}, 
-    {id: 2, locationId: 2, foodId: 4, quantity: 6},
-    {id: 3, locationId: 3, foodId: 1, quantity: 8},
-    {id: 4, locationId: 4, foodId: 3, quantity: 9} 
+    {id:1, locationId: 1, foodId:2, quantity: 7},
+    {id:2, locationId: 1, foodId:1, quantity: 7}, 
+    {id: 5, locationId: 2, foodId: 1, quantity: 6},
+    {id: 6, locationId: 2, foodId: 2, quantity: 6},
+    {id: 7, locationId: 2, foodId: 3, quantity: 6},
+    {id: 8, locationId: 2, foodId: 5, quantity: 6},
+    {id: 9, locationId: 3, foodId: 1, quantity: 8},
+    {id: 10, locationId: 3, foodId: 2, quantity: 8},
+    {id: 11, locationId: 3, foodId: 4, quantity: 8},
+    {id: 12, locationId: 3, foodId: 5, quantity: 8},
+    {id: 13, locationId: 4, foodId: 3, quantity: 9},
+    {id: 14, locationId: 4, foodId: 2, quantity: 9},
+    {id: 15, locationId: 4, foodId: 1, quantity: 9},
+    {id: 16, locationId: 4, foodId: 5, quantity: 9},
+    {id: 17, locationId: 4, foodId: 4, quantity: 9},
+    {id: 18, locationId: 5, foodId: 3, quantity: 10},
+    {id: 19, locationId: 5, foodId: 2, quantity: 10},
+    {id: 20, locationId: 5, foodId: 4, quantity: 10}
     ],
     drinkInventory: [ 
     {id: 1, locationId: 1, drinkId: 4, quantity: 25}, 
+    {id: 1, locationId: 1, drinkId: 4, quantity: 25}, 
+    {id: 1, locationId: 1, drinkId: 4, quantity: 25}, 
+    {id: 1, locationId: 1, drinkId: 4, quantity: 25}, 
     {id: 2, locationId: 2, drinkId: 3, quantity: 30}, 
     {id: 3, locationId: 3, drinkId: 2, quantity: 1}, 
-    {id: 4, locationId: 4, drinkId: 1, quantity: 35}
+    {id: 4, locationId: 4, drinkId: 1, quantity: 35},
+    {id: 5, locationId: 5, drinkId: 3, quantity: 10}
     ],
     dessertInventory:[
     {id: 1, locationId: 1,dessertId: 1, quantity: 8},  
     {id: 2, locationId: 2, dessertId: 2, quantity: 22},
     {id: 3, locationId: 3, dessertId: 3, quantity: 34},
-    {id: 4, locationId: 4, dessertId: 4, quantity: 20}
+    {id: 4, locationId: 4, dessertId: 4, quantity: 20},
+    {id: 5, locationId: 5, dessertId: 3, quantity: 10}
     ],
     happyToysInventory:[
     {id: 1, locationId: 1, toyId: 1, quantity: 3},
     {id: 2, locationId: 2, toyId: 2, quantity: 5},
     {id: 3, locationId: 3, toyId: 3,quantity: 8},
-    {id:4 , locationId: 4, toyId: 4, quantity: 12}
+    {id:4 , locationId: 4, toyId: 4, quantity: 12},
+    {id: 5, locationId: 5, toyId: 3, quantity: 10}
     ],
     customOrders: [{
     id: 1,
