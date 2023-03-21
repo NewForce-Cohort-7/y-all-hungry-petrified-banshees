@@ -18,13 +18,15 @@ document.addEventListener(
 
 export const yallHungry= () => {
     return  `
-        <h1>Yall Hungry?</h1>
-        <article class="choices">
-            <section class="choices__ locations options">
+    <h1>Yall Hungry?</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <section class="choices__locations options">
                 <h2>Locations</h2>
                 ${Locations()}
             </section>
-            <section class="choices__ foods options">
+            <section class="choices__foods options">
                 <h2>Foods</h2>
                 ${Foods()}
             </section>
@@ -41,13 +43,23 @@ export const yallHungry= () => {
                 <h2>Happy Toys!!!!</h2>
                 ${Toys()}
             </section>
-        </article>
-        <article>
+            <article>
             <button id="orderButton">Create Custom Order</button>
-        </article>
-        <article class="customOrders">
+            </article>
+            </div>
+            <div id="orders" class="col">
+            <article class="customOrders">
             <h2>Your Order</h2>
             ${Orders()}
-        </article>
+            </article>
+            <article class="total">
+            <h6> Your Total </h6>
+            <br>
+            </article>
+            <article id="order-location">
+            </article>
+            </div>
+        </div>
+    </div> 
     `
 }

@@ -90,14 +90,15 @@ const database = {
     {id:4 , locationId: 4, toyId: 4, quantity: 12},
     {id:8 , locationId: 4, toyId: 1, quantity: 5}
     ],
-    customOrders: [{
-    id: 1,
-    foodId: 2,
-    drinkId: 4,
-    dessertId: 3,
-    toyId: 1,
-    locationId: 1,
-    timestamp: 1543215616151}
+     customOrders: [
+        //{
+    // id: 1,
+    // foodId: 2,
+    // drinkId: 4,
+    // dessertId: 3,
+    // toyId: 1,
+    // locationId: 1,
+    // timestamp: 1543215616151}
     ],
     orderBuilder:{}
 }
