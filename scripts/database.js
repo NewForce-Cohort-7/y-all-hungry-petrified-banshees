@@ -91,7 +91,12 @@ const database = {
     {id: 2, locationId: 2, dessertId: 2, quantity: 22},
     {id: 3, locationId: 3, dessertId: 3, quantity: 34},
     {id: 4, locationId: 4, dessertId: 4, quantity: 20},
-    {id: 5, locationId: 5, dessertId: 3, quantity: 10}
+    {id: 5, locationId: 5, dessertId: 3, quantity: 10},
+    {id: 6, locationId: 1,dessertId: 2, quantity: 8},
+    {id: 7, locationId: 2,dessertId: 4, quantity: 8},
+    {id: 8, locationId: 3, dessertId: 1, quantity: 34},
+    {id: 9, locationId: 4, dessertId: 2, quantity: 20},
+    {id: 10, locationId: 5, dessertId: 1, quantity: 10}
     ],
     happyToysInventory:[
     {id: 1, locationId: 1, toyId: 1, quantity: 3},

@@ -27,7 +27,7 @@ document.addEventListener(
                                  if(currentOrder.locationId === singleHappyToy.locationId){
                                 foundToyId = singleHappyToy.toyId
                                 if(foundToyId === toy.id){
-                                    return `<option value="${toy.id}" selected>${toy.name} (${singleHappyToy.quantity})`
+                                    return `<option value="${toy.id}">${toy.name} (${singleHappyToy.quantity})`
                                 }
                                 
                             }

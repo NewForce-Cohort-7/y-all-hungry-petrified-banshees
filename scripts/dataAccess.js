@@ -45,17 +45,17 @@ export const setLocation = (id) => {
 }
 export const setFood = (id) => {
     database.orderBuilder.foodId = id
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    //document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const setDrink = (id) => {
     database.orderBuilder.drinkId = id
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    //document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const setDessert = (id) => {
     database.orderBuilder.dessertId = id
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    //document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const setToy = (id) => {
     database.orderBuilder.toyId = id
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+    //document.dispatchEvent(new CustomEvent("stateChanged"))
 }

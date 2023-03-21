@@ -2,11 +2,10 @@ import {setDessert, getDesserts, getOrderBuilder, getdessertInventory, getLocati
 
 
 const desserts = getDesserts()
-const currentOrder = getOrderBuilder()
-
+//const locationArray = getLocations ()
 const dessertsInventory = getdessertInventory ()
 
-const locations = getLocations ()
+
 
 //will need a addevent listeners
 document.addEventListener(
@@ -27,10 +26,14 @@ export const Desserts = () => {
     html += '<option value="0"> Select a dessert choice'
 
     const arrayOfOptions = desserts.map( (dessert) => {
-        if(currentOrder.dessertId === dessert.id){
-            return `<option name="drink" value="${dessert.id}" selected>${dessert.name}`
-        }else{
-            return `<option name="drink" value="${dessert.id}">${dessert.name}`
+        let foundDessertId = null
+        for (const singleDessert of dessertsInventory) {
+            
+        if(currentOrder.locationId === singleDessert.locationId){
+            foundDessertId = singleDessert.dessertId
+            if(foundDessertId === dessert.id){
+            return `<option value="${dessert.id}">${dessert.name} (${singleDessert.quantity}}`}
+        }
         }   
         }
     )
