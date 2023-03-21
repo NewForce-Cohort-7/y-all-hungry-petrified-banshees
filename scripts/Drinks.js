@@ -43,28 +43,15 @@ export const Drinks = () => {
     `
         }
 
-// OLD CODE
-// .MAP METHOD
-// export const Drinks = () => {
-    
-//     let html = '<select id="drink">'
-//     html += '<option value="0"> Select a drink'
-
-//     const arrayOfOptions = drinks.map( (drink) => {
-//         const currentOrder = getOrderBuilder()
+        // const RunningSubtotal = (nums) => {
+        //     let total = 0
+        //     let result = []
         
-//         if(currentOrder.drinkId === drink.id){
-//             return `<option name="drink" value="${drink.id}" selected>${drink.name}`
-//         }else{
-//             return `<option name="drink" value="${drink.id}">${drink.name}`
-//         } 
-
-//         }
-//     )
-
-    
-
-//     html += arrayOfOptions.join("")
-//     html += "</select>"
-//     return html
-// }
+        //     for (let i = 0; i <nums.length; i++){
+        //         total = total + nums[i]
+        //         result.push(total)
+        //     }
+        //     return result
+        
+        // }
+        // <article class="Subtotal"> </article>
