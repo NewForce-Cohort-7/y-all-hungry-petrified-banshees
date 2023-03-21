@@ -63,10 +63,16 @@ const database = {
     {id: 4, locationId: 4, foodId: 3, quantity: 9} 
     ],
     drinkInventory: [ 
-    {id: 1, locationId: 1, drinkId: 4, quantity: 25}, 
-    {id: 2, locationId: 2, drinkId: 3, quantity: 30}, 
-    {id: 3, locationId: 3, drinkId: 2, quantity: 1}, 
-    {id: 4, locationId: 4, drinkId: 1, quantity: 35}
+    {id: 1, locationId: 1, drinkId: 5, quantity: 25}, 
+    {id: 2, locationId: 2, drinkId: 4, quantity: 30}, 
+    {id: 3, locationId: 3, drinkId: 3, quantity: 14}, 
+    {id: 4, locationId: 4, drinkId: 2, quantity: 35},
+    {id: 5, locationId: 1, drinkId: 1, quantity: 598}, 
+    {id: 6, locationId: 2, drinkId: 5, quantity: 12}, 
+    {id: 7, locationId: 3, drinkId: 4, quantity: 6}, 
+    {id: 8, locationId: 4, drinkId: 3, quantity: 4},
+    {id: 9, locationId: 5, drinkId: 2, quantity: 17},
+    {id: 10, locationId: 5, drinkId: 1, quantity: 33}
     ],
     dessertInventory:[
     {id: 1, locationId: 1,dessertId: 1, quantity: 8},  
