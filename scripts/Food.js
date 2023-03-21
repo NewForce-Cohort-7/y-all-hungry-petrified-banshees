@@ -1,6 +1,7 @@
-import { getFoods, setFood, getOrderBuilder } from "./dataAccess.js";
+import { getFoods, setFood, getOrderBuilder, getfoodInventory } from "./dataAccess.js";
 
 const foods = getFoods()
+const foodsInventory = getfoodInventory()
 
 document.addEventListener(
     "change",
@@ -19,10 +20,16 @@ export const Foods = () => {
             ${
                 foods.map(
                     (food) => {
-                        if(currentOrder.foodId === food.id){
-                            return `<option value="${food.id}" selected>${food.name}</option>`
-                        }else{
-                            return `<option value="${food.id}">${food.name}</option>`
+                        let foundFoodId = null
+                        for (const singleFood of foodsInventory) {
+
+                                 if(currentOrder.locationId === singleFood.locationId){
+                                foundFoodId = singleFood.foodId
+                                
+                                if(foundFoodId === food.id && singleFood.quantity > 0){
+                                    return `<option value="${food.id}">${food.name} (${singleFood.quantity})`
+                                }
+                            }
                         }
                     }
                 ).join("")
