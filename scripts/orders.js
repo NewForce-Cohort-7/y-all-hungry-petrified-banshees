@@ -41,10 +41,10 @@ const foundDessert = desserts.find((dessert) => {
 
 
 const totalCost = foundDrink.price + foundDessert.price + foundFood.price + foundToy.price
-
-const costString = totalCost.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD"
+const costPlusTax = totalCost + [totalCost * .06 ]
+const costString = costPlusTax.toLocaleString("en-US", {
+style: "currency",
+currency: "USD"
 })
 
 

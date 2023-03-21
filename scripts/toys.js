@@ -6,7 +6,7 @@ const happyToys = gethappyToysInventory()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.id === "toy") {
+        if (event.target.id === "singleHappyToy") {
             setToy(parseInt(event.target.value))
         }
     }
@@ -27,7 +27,7 @@ document.addEventListener(
                                  if(currentOrder.locationId === singleHappyToy.locationId){
                                 foundToyId = singleHappyToy.toyId
                                 if(foundToyId === toy.id){
-                                    return `<option value="${toy.id}" selected>${toy.name} (${singleHappyToy.quantity})`
+                                    return `<option value="${toy.id}" >${toy.name} (${singleHappyToy.quantity})`
                                 }
                                 
                             }
