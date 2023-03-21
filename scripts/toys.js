@@ -1,6 +1,8 @@
-import { getToys, setToy, getOrderBuilder } from "./dataAccess.js"
-const toys = getToys()
+import { getToys, setToy, getOrderBuilder, getLocations, setLocation, gethappyToysInventory } from "./dataAccess.js"
 
+const toys = getToys()
+const locationArray = getLocations()
+const happyToys = gethappyToysInventory()
 document.addEventListener(
     "change",
     (event) => {
@@ -19,14 +21,20 @@ document.addEventListener(
                 
                 toys.map(
                     (toy) => {
-                        if(currentOrder.toyId === toy.id){
-                            return `<option value="${toy.id}" selected>${toy.name}`
-                        }else{
-                            return `<option value="${toy.id}">${toy.name}`
+                        let foundToyId = null
+                        for (let singleHappyToy of happyToys) {
+
+                                 if(currentOrder.locationId === singleHappyToy.locationId){
+                                foundToyId = singleHappyToy.toyId
+                                if(foundToyId === toy.id){
+                                    return `<option value="${toy.id}" selected>${toy.name} (${singleHappyToy.quantity})`
+                                }
+                                
+                            }
                         }
-                    }
+            }
                 ).join("")
             }
         </select>
     `
-}
+        }
