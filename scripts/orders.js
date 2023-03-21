@@ -1,9 +1,8 @@
-import { getOrders, getLocations, getFoods, getDrinks, getToys, getDesserts } from "./dataAccess.js"
+import { getOrders, getFoods, getDrinks, getToys, getDesserts } from "./dataAccess.js"
 
 
 const drinks = getDrinks()
 const foods = getFoods()
-const locations = getLocations()
 const toys = getToys()
 const desserts = getDesserts()
 const order = getOrders()
@@ -16,12 +15,6 @@ const foundDrink = drinks.find((drink) => {
     return drink.id === order.drinkId
     }
 ) 
-
-
-// const foundLocation = locations.find((location) => {
-//         return location.id === order.locationId
-//     }
-// )
 
 const foundFood = foods.find((food) => {
         return food.id === order.foodId
