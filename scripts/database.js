@@ -95,10 +95,13 @@ const database = {
     ],
     happyToysInventory:[
     {id: 1, locationId: 1, toyId: 1, quantity: 3},
+    {id: 5, locationId: 1, toyId: 4, quantity: 7},
     {id: 2, locationId: 2, toyId: 2, quantity: 5},
+    {id: 6, locationId: 2, toyId: 3, quantity: 10},
     {id: 3, locationId: 3, toyId: 3,quantity: 8},
+    {id: 7, locationId: 3, toyId: 2,quantity: 4},
     {id:4 , locationId: 4, toyId: 4, quantity: 12},
-    {id: 5, locationId: 5, toyId: 3, quantity: 10}
+    {id:8 , locationId: 4, toyId: 1, quantity: 5}
     ],
     customOrders: [{
     id: 1,
