@@ -12,7 +12,7 @@ document.addEventListener(
         if (changeEvent.target.id === "dessert") {
             setDessert(parseInt(changeEvent.target.value))  
         }
-
+        dessertSubtotal ()
         let dessertMatch = {}
         const order = getOrderBuilder()
         for (const dessert of desserts) {

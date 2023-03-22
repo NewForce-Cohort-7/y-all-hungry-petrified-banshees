@@ -1,4 +1,4 @@
-import { getFoods, getOrders, setFood, getOrderBuilder, getfoodInventory, subTotal } from "./dataAccess.js";
+import { getFoods, getOrders, setFood, getOrderBuilder, getfoodInventory } from "./dataAccess.js";
 
 const foods = getFoods()
 const foodsInventory = getfoodInventory()

@@ -6,6 +6,7 @@ import {Locations} from "./Locations.js"
 import {Foods} from "./Food.js"
 import { Orders } from "./orders.js"
 
+
 document.addEventListener(
     "click",
     (event) => { 
