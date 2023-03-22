@@ -52,11 +52,10 @@ export const yallHungry= () => {
             <h2>Your Order</h2>
             ${Orders()}
             </article>
-            <article class="total">
-            <h6> Your Total </h6>
-            <br>
-            </article>
             <article id="order-location">
+            </article>
+            <article id="total">
+            Subtotal:
             </article>
             </div>
         </div>
