@@ -1,21 +1,28 @@
-import {setDessert, getDesserts, getOrderBuilder, getdessertInventory, getLocations } from "./dataAccess.js";
+import {setDessert, getDesserts, getOrderBuilder, getdessertInventory, getOrders } from "./dataAccess.js";
 
 
 const desserts = getDesserts()
-//const locationArray = getLocations ()
 const dessertsInventory = getdessertInventory ()
+let dessertPrice = 0;
 
-export const dessertSubTotal = () => {
-let dessertMatch = null
+//will need a addevent listeners
+document.addEventListener(
+    "change",
+    (changeEvent) => {
+        if (changeEvent.target.id === "dessert") {
+            setDessert(parseInt(changeEvent.target.value))  
+        }
+
+        let dessertMatch = {}
         const order = getOrderBuilder()
         for (const dessert of desserts) {
             if(dessert.id === order.dessertId){
                 dessertMatch = dessert
             }
         }
-        const dessertPrice = dessertMatch.price
-        const rollingTotal = dessertPrice
-        const costString = rollingTotal.toLocaleString("en-US", {
+        dessertPrice = dessertMatch.price
+        
+        const costString = dessertPrice.toLocaleString("en-US", {
             style: "currency",
             currency: "USD"
         })
@@ -25,17 +32,6 @@ let dessertMatch = null
         }
         //if null, order-location is blank
         else{document.querySelector("#total").innerHTML = ''}
-    }
-
-//will need a addevent listeners
-document.addEventListener(
-    "change",
-    (changeEvent) => {
-        if (changeEvent.target.id === "dessert") {
-            setDessert(parseInt(changeEvent.target.value))  
-
-            subTotal()
-        }
   }
 )
 
@@ -43,7 +39,8 @@ document.addEventListener(
 
 export const Desserts = () => {
     const currentOrder = getOrderBuilder()
-
+    const orders = getOrders ()
+    
     let html = '<select id="dessert">'
     html += '<option value="0"> Select a dessert choice'
 
@@ -53,8 +50,8 @@ export const Desserts = () => {
             
         if(currentOrder.locationId === singleDessert.locationId){
             foundDessertId = singleDessert.dessertId
-            if(foundDessertId === dessert.id){
-            return `<option value="${dessert.id}">${dessert.name} (${singleDessert.quantity}}`}
+            if(foundDessertId === dessert.id && singleDessert.quantity > 0){const sold = orders.filter(x=> x.locationId === singleDessert.locationId && singleDessert.dessertId === x.dessertId)
+            return `<option value="${dessert.id}">${dessert.name} (${singleDessert.quantity - sold.length}}`}
         }
         }   
         }
