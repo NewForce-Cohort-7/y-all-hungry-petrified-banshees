@@ -3,7 +3,7 @@ import {setDessert, getDesserts, getOrderBuilder, getdessertInventory, getOrders
 
 const desserts = getDesserts()
 const dessertsInventory = getdessertInventory ()
-let dessertPrice = 0;
+
 
 //will need a addevent listeners
 document.addEventListener(
@@ -61,17 +61,3 @@ export const Desserts = () => {
     html += "</select>"
     return html
 }
-
-/*Function to find dessert inventory based off location
-
-export const filterDessertInventoryByLocation = (desserts,singleDessertTypeInventory)=>{
-    let dessertType= []
-    for(const dessert of desserts){
-        if (dessert.id === singleDessertTypeInventory.dessertId){
-            dessertType.push(dessert)
-           
-        }
-    }
-    return dessertType
-    
-}*/

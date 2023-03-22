@@ -56,7 +56,7 @@ export const yallHungry= () => {
             <article id="order-location">
             </article>
             <article id="total">
-            Subtotal:
+            Subtotal:<strong> $0.00 </strong>
             </article>
             </div>
         </div>

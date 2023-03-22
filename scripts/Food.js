@@ -1,8 +1,9 @@
 import { getFoods, getOrders, setFood, getOrderBuilder, getfoodInventory } from "./dataAccess.js";
+import { getFoods, getOrders, setFood, getOrderBuilder, getfoodInventory} from "./dataAccess.js";
 
 const foods = getFoods()
 const foodsInventory = getfoodInventory()
-let foodPrice = 0;
+
 
 document.addEventListener(
     "change",
@@ -11,28 +12,6 @@ document.addEventListener(
             setFood(parseInt(event.target.value)) 
             console.log(getOrderBuilder())
         }
-
-        let foodMatch = {}
-        const order = getOrderBuilder()
-        for (const food of foods) {
-            if(food.id === order.foodId){
-                foodMatch = food
-            }
-        }
-        
-        foodPrice = foodMatch.price
-        const costString = foodPrice.toLocaleString("en-US", {
-            style: "currency",
-            currency: "USD"
-        })
-       
-        if(foodMatch !== null){
-            document.querySelector("#total").innerHTML = `Subtotal: <strong>${costString}</strong>`
-            
-        }
-        //if null, order-location is blank
-        else{document.querySelector("#total").innerHTML = ''}
-
     }
 )
 
@@ -62,10 +41,4 @@ export const Foods = () => {
         }
         </select>
         `
-    }
-
-
-
-    export const getFoodPrice = () => {
-        return foodPrice
     }
