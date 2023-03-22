@@ -37,8 +37,8 @@ const foundDessert = desserts.find((dessert) => {
 let totalCost = (foundDrink.price + foundDessert.price + foundFood.price + foundToy.price) *1.06
 
 const costString = totalCost.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD"
+style: "currency",
+currency: "USD"
 })
 let locationMatch;
 for (const location of locations) {
@@ -46,11 +46,11 @@ for (const location of locations) {
         locationMatch = location.name
     }
 }
-
+ 
 
 return `<li>
  Order #${order.id} Cost: ${costString} 
- Order #${order.id} was placed on ${order.timestamp} @ our ${locationMatch} location
+ Order #${order.id} was placed today for our ${locationMatch} location
      </li>`
  }
 
