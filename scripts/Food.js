@@ -9,8 +9,30 @@ document.addEventListener(
         if (event.target.id === "food") {
             setFood(parseInt(event.target.value)) 
         }
+
+        let foodMatch = null
+        const order = getOrderBuilder()
+        for (const food of foods) {
+            if(food.id === order.foodId){
+                foodMatch = food
+            }
+        }
+        const foodPrice = foodMatch.price
+        const rollingTotal = foodPrice
+        const costString = rollingTotal.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD"
+        })
+       
+        if(foodMatch !== null){
+            document.querySelector("#total").innerHTML = `Subtotal: <strong>${costString}</strong>`
+            
+        }
+        //if null, order-location is blank
+        else{document.querySelector("#total").innerHTML = ''}
+
     }
-    )
+)
     
 export const Foods = () => {
     const currentOrder = getOrderBuilder()
