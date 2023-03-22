@@ -58,3 +58,4 @@ export const setToy = (id) => {
     database.orderBuilder.toyId = id
 
 }
+ export const subTotal = 0
