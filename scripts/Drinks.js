@@ -10,28 +10,6 @@ document.addEventListener(
         if (event.target.id === "singleDrink") {
             setDrink(parseInt(event.target.value))  
         }
-
-        let drinkPrice = 0;
-        let drinkMatch = {}
-        const order = getOrderBuilder()
-            for (const drink of drinks) {
-                if(drink.id === order.drinkId){
-                    drinkMatch = drink
-    }
-}
-        drinkPrice = drinkMatch.price
-        const drinkCostString = drinkPrice.toLocaleString("en-US", {
-            style: "currency",
-            currency: "USD"
-})
-// console.log(drinkCostString)
-// return drinkCostString
-        if(drinkMatch !== null){
-            document.querySelector("#total").innerHTML = `Subtotal: <strong>${drinkCostString}</strong>`
-    
-}
-
-            else{document.querySelector("#total").innerHTML = ''}
     }
 )
 
