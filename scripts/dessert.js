@@ -5,7 +5,27 @@ const desserts = getDesserts()
 //const locationArray = getLocations ()
 const dessertsInventory = getdessertInventory ()
 
-
+export const dessertSubTotal = () => {
+let dessertMatch = null
+        const order = getOrderBuilder()
+        for (const dessert of desserts) {
+            if(dessert.id === order.dessertId){
+                dessertMatch = dessert
+            }
+        }
+        const dessertPrice = dessertMatch.price
+        const rollingTotal = dessertPrice
+        const costString = rollingTotal.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD"
+        })
+        if(dessertMatch !== null){
+            document.querySelector("#total").innerHTML = `Subtotal: <strong>${costString}</strong>`
+            
+        }
+        //if null, order-location is blank
+        else{document.querySelector("#total").innerHTML = ''}
+    }
 
 //will need a addevent listeners
 document.addEventListener(
@@ -13,8 +33,10 @@ document.addEventListener(
     (changeEvent) => {
         if (changeEvent.target.id === "dessert") {
             setDessert(parseInt(changeEvent.target.value))  
+
+            subTotal()
         }
-    }
+  }
 )
 
 //build html that will be exported to the module responsible for our html

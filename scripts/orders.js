@@ -6,7 +6,7 @@ const foods = getFoods()
 const toys = getToys()
 const desserts = getDesserts()
 const locations = getLocations()
-const order = getOrders()
+//const order = getOrders()
 const currentOrder = getOrderBuilder()
 
 
