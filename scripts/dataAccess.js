@@ -42,20 +42,55 @@ export const getOrders = () => {
 export const setLocation = (id) => {
     database.orderBuilder.locationId = id
     document.dispatchEvent(new CustomEvent("stateChanged"))
+    updateSubtotal()
 }
 export const setFood = (id) => {
     database.orderBuilder.foodId = id
+    updateSubtotal()
 }
 export const setDrink = (id) => {
     database.orderBuilder.drinkId = id
+    updateSubtotal()
 
 }
 export const setDessert = (id) => {
     database.orderBuilder.dessertId = id
+    updateSubtotal()
 
 }
 export const setToy = (id) => {
     database.orderBuilder.toyId = id
+    updateSubtotal()
 
 }
- export const subTotal = 0
+export const updateSubtotal = () => {
+    let subtotal = 0
+
+for (const foods of database.food) {
+    if (foods.id === database.orderBuilder.foodId){
+        subtotal += foods.price
+    }
+}
+for (const drinks of database.drinks) {
+    if (drinks.id === database.orderBuilder.drinkId){
+        subtotal += drinks.price
+    }
+}
+for (const desserts of database.desserts) {
+    if (desserts.id === database.orderBuilder.dessertId){
+        subtotal += desserts.price
+    }
+}for (const toys of database.happyToys) {
+    if (toys.id === database.orderBuilder.toyId) {
+        subtotal += toys.price
+    }
+    
+}
+    const withTax = subtotal * 1.06
+    const costString = withTax.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD"
+        })
+
+    return  document.querySelector("#total").innerHTML = `Subtotal: <strong>${costString}</strong>`
+}

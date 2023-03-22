@@ -1,8 +1,7 @@
-import { getToys, getOrders, setToy, getOrderBuilder, gethappyToysInventory, subTotal } from "./dataAccess.js";
+import { getToys, getOrders, setToy, getOrderBuilder, gethappyToysInventory } from "./dataAccess.js";
 
 const toys = getToys()
 const toysInventory = gethappyToysInventory()
-let toyPrice = 0;
 
 document.addEventListener(
     "change",
@@ -11,28 +10,6 @@ document.addEventListener(
             setToy(parseInt(event.target.value)) 
             console.log(getOrderBuilder())
         }
-
-        let toyMatch = {}
-        const order = getOrderBuilder()
-        for (const toy of toys) {
-            if(toy.id === order.toyId){
-                toyMatch = toy
-            }
-        }
-        
-        toyPrice = toyMatch.price
-        const costString = toyPrice.toLocaleString("en-US", {
-            style: "currency",
-            currency: "USD"
-        })
-       
-        if(toyMatch !== null){
-            document.querySelector("#total").innerHTML = `Subtotal: <strong>${costString}</strong>`
-            
-        }
-        //if null, order-location is blank
-        else{document.querySelector("#total").innerHTML = ''}
-
     }
 )
 
@@ -62,10 +39,4 @@ export const Toys = () => {
         }
         </select>
         `
-    }
-
-
-
-    export const getToyPrice = () => {
-        return toyPrice
     }
