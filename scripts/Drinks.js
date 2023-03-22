@@ -42,16 +42,18 @@ export const Drinks = () => {
         </select>
     `
         }
-
-        // const RunningSubtotal = (nums) => {
+//experimenting for a subtotal
+        // const RunningSubtotal = (drinksArray) => {
         //     let total = 0
         //     let result = []
         
-        //     for (let i = 0; i <nums.length; i++){
-        //         total = total + nums[i]
+        //     for (){
+        //         total = total + drinksArray[i]
         //         result.push(total)
         //     }
-        //     return result
+        //     return `<article class="Subtotal">
+        //                 <div> ${result} </div>
+        //                  </article>`
         
         // }
-        // <article class="Subtotal"> </article>
+        // RunningSubtotal()
