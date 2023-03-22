@@ -6,7 +6,7 @@ const foods = getFoods()
 const toys = getToys()
 const desserts = getDesserts()
 const locations = getLocations()
-const order = getOrders()
+//const order = getOrders()
 const currentOrder = getOrderBuilder()
 
 
@@ -53,6 +53,8 @@ return `<li>
  Order #${order.id} was placed today for our ${locationMatch} location
      </li>`
  }
+
+ 
 export const Orders = () => {
     /*
         Can you explain why the state variable has to be inside
