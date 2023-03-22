@@ -43,7 +43,7 @@ export const Desserts = () => {
     return html
 }
 
-//Function to find dessert inventory based off location
+/*Function to find dessert inventory based off location
 
 export const filterDessertInventoryByLocation = (desserts,singleDessertTypeInventory)=>{
     let dessertType= []
@@ -55,4 +55,4 @@ export const filterDessertInventoryByLocation = (desserts,singleDessertTypeInven
     }
     return dessertType
     
-}
+}*/
