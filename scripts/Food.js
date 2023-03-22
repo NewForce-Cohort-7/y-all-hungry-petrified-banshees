@@ -33,7 +33,7 @@ document.addEventListener(
 
     }
 )
-    
+
 export const Foods = () => {
     const currentOrder = getOrderBuilder()
     return `

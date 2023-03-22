@@ -47,10 +47,14 @@ for (const location of locations) {
     }
 }
 
-
+const timestamp = Date.now();
+const dateObj = new Date(timestamp);
+const hours = dateObj.getHours().toString().padStart(2, '0');
+const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+const timeString = `${hours}:${minutes}`;
 return `<li>
  Order #${order.id} Cost: ${costString} 
- Order #${order.id} was placed on ${order.timestamp}. @ our ${locationMatch} location
+ Order #${order.id} was placed on ${timeString} @ our ${locationMatch} location
      </li>`
  }
 export const Orders = () => {

@@ -9,7 +9,30 @@ document.addEventListener(
         if (event.target.id === "singleHappyToy") {
             setToy(parseInt(event.target.value))
         }
+        
+        let toyMatch = null
+        const order = getOrderBuilder()
+        for (const toy of toys) {
+            if(toy.id === order.toyId){
+                toyMatch = toy
+            }
+        }
+        const toyPrice = toyMatch.price
+        const rollingTotal = toyPrice 
+        const costString = rollingTotal.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD"
+        })
+       
+        if(toyMatch !== null){
+            document.querySelector("#total").innerHTML = `Subtotal: <strong>${costString}</strong>`
+            
+        }
+        //if null, order-location is blank
+        else{document.querySelector("#total").innerHTML = ''}
+
     }
+    
     )
     
     export const Toys = () => {
