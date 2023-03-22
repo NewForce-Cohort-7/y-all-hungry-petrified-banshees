@@ -1,5 +1,7 @@
 import { database } from "./database.js"
 
+
+
 export const addCustomOrder = () => {
     // Copy the current state of user choices
     const newOrder = {...database.orderBuilder}

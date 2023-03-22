@@ -50,7 +50,7 @@ for (const location of locations) {
 
 return `<li>
  Order #${order.id} Cost: ${costString} 
- Order #${order.id} was placed on ${order.timestamp} @ our ${locationMatch} location
+ Order #${order.id} was placed on ${order.timestamp}. @ our ${locationMatch} location
      </li>`
  }
 export const Orders = () => {
